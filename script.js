@@ -13,3 +13,5 @@ function getComputerChoice() {
     }
 }
 
+const computerChoice = getComputerChoice();
+console.log("computers choice", computerChoice);
