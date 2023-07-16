@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>My Web Page</title>
-  <script src="path/to/script.js"></script>
-</head>
-<body>
-  <h1>Hello, world!</h1>
-  <script>
-    // Inline JavaScript code
-    alert("Welcome to my web page!");
-  </script>
-</body>
+  <head>
+    <title>My Web Page</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Wand | Bow | Mace</h1>
+    <h2>3 Weapons! 5 Chances!</h2>
+    <h3>Choose your Weapon</h3>
+    
+
+    <div class="buttons-div">
+      <h4>Rules:</h4>
+      <p>Wand beats Mace ~ Mace beats Bow ~ Bow beats Wand</p>
+      <button onclick="wandButton()">
+        <img src="magicWand.jpg" alt="wand">
+      </button>
+      <button onclick="bowButton()">
+        <img src="bow.jpg" alt="bow">
+      </button>
+      <button onclick="maceButton()">
+        <img src="mace.jpg" alt="mace">
+      </button>
+    </div>
+
+    <script>
+      // Inline JavaScript code
+    </script>
+  </body>
 </html>

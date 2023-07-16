@@ -15,3 +15,11 @@ function getComputerChoice() {
 
 const computerChoice = getComputerChoice();
 console.log("computers choice", computerChoice);
+
+function game(){
+ console.log ("game start");
+  
+}
+game();
+game();
+console.log(getComputerChoice());
