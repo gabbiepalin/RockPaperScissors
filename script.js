@@ -20,8 +20,9 @@ let playerchoice;
 
 function getPlayerChoice(choice){
     //when person hits button call this function 
-
+    playerchoice = choice;
     console.log(choice)
+    console.log("pc " + playerchoice)
 }
 
 function game(){
