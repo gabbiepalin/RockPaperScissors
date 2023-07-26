@@ -16,6 +16,14 @@ function getComputerChoice() {
 const computerChoice = getComputerChoice();
 console.log("computers choice", computerChoice);
 
+let playerchoice;
+
+function getPlayerChoice(choice){
+    //when person hits button call this function 
+
+    console.log(choice)
+}
+
 function game(){
  console.log ("game start");
   
