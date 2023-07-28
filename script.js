@@ -5,16 +5,14 @@ function getComputerChoice() {
     //make computer pick a random number for choice (0 = "rock", 1 = "paper", 2 = "scissors")
     switch (randomNumber) {
         case 0:
-            return "rock";
+            return "wand";
         case 1:
-            return "paper";
+            return "bow";
         case 2:
-            return "scissors";
+            return "mace";
     }
 }
 
-const computerChoice = getComputerChoice();
-console.log("computers choice", computerChoice);
 
 let playerchoice;
 
@@ -23,12 +21,8 @@ function getPlayerChoice(choice){
     playerchoice = choice;
     console.log(choice)
     console.log("pc " + playerchoice)
+    const computerChoice = getComputerChoice();
+console.log("computers choice", computerChoice);
 }
+//next step would be to put both the computer and player choice together to play one round of the game
 
-function game(){
- console.log ("game start");
-  
-}
-game();
-game();
-console.log(getComputerChoice());
