@@ -1,0 +1,14 @@
+player selects mace 
+-computer selects mace: draw 
+-computer selects bow: win
+-computer selects wand: lose 
+
+player selects bow
+-computer selects mace: lose
+-computer selects bow: draw
+-computer selects wand: win
+
+player selects wand
+-computer selects mace: win
+-computer selects bow: lose
+-computer selects wand: draw 
