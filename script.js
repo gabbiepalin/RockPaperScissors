@@ -1,3 +1,8 @@
+let playerwins_counter = 0;
+let computerwins_counter = 0;
+
+// when decide winner happens +1 to counter 
+
 function getComputerChoice() {
   //generate a random number between zero and two
   const randomNumber = Math.floor(Math.random() * 3);
@@ -21,8 +26,22 @@ function getPlayerChoice(choice) {
   const computerChoice = getComputerChoice();
   // console.log("computers choice", computerChoice);
   let decision = decideWinner(playerchoice, computerChoice);
-  
-  console.log(decision);
+
+  if(decision == "win") playerwins_counter = playerwins_counter + 1;
+  if(decision == "lose")  computerwins_counter = computerwins_counter + 1;
+
+  console.log("You: " + decision);
+  console.log("Player wins: " + playerwins_counter);
+  console.log("Computer wins: " + computerwins_counter);
+
+  if(playerwins_counter == 5 || computerwins_counter == 5) 
+    clearCounters();
+}
+
+function clearCounters() {
+  console.log("Clearing Counters!");
+  playerwins_counter = 0;
+  computerwins_counter = 0;
 }
 
 function decideWinner(playerchoice, computerChoice) {
@@ -44,13 +63,15 @@ function decideWinner(playerchoice, computerChoice) {
     if(computerChoice == "wand") return "win";
   }
   if(playerchoice == "wand"){
-    if(computerChoice == "mace") return "win";
+    if(computerChoice == "mace") return "win" ;
     if(computerChoice == "bow") return "lose";
     if(computerChoice == "wand") return "draw";
   }
   return "Error";
 }
+
 //next step would be to put both the computer and player choice together to play one round of the game
 
 
 
+``
