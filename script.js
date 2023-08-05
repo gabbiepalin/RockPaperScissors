@@ -20,7 +20,9 @@ function getPlayerChoice(choice) {
   // console.log("pc " + playerchoice)
   const computerChoice = getComputerChoice();
   // console.log("computers choice", computerChoice);
-  decideWinner(playerchoice, computerChoice);
+  let decision = decideWinner(playerchoice, computerChoice);
+  
+  console.log(decision);
 }
 
 function decideWinner(playerchoice, computerChoice) {
@@ -30,6 +32,25 @@ function decideWinner(playerchoice, computerChoice) {
   // decide who wins
   console.log(playerchoice + " " + computerChoice);
   console.log("Starting Decision");
+  
+  if(playerchoice == "mace") {
+    if(computerChoice == "mace") return "draw";
+    if(computerChoice == "bow") return "win";
+    if(computerChoice == "wand") return "lose";
+  } 
+  if(playerchoice == "bow"){
+    if(computerChoice == "mace") return "lose";
+    if(computerChoice == "bow") return "draw";
+    if(computerChoice == "wand") return "win";
+  }
+  if(playerchoice == "wand"){
+    if(computerChoice == "mace") return "win";
+    if(computerChoice == "bow") return "lose";
+    if(computerChoice == "wand") return "draw";
+  }
+  return "Error";
 }
 //next step would be to put both the computer and player choice together to play one round of the game
+
+
 
