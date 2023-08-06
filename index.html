@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>My Web Page</title>
-    <script src="./script.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
   </head>
@@ -24,16 +23,18 @@
       <button onclick="getPlayerChoice('mace')">
         <img src="mace.jpg" alt="mace">
       </button>
-      <p>Enemy Wins:</p>
-      <p>Your Wins: </p>
     </div>
-
-    <div class="lives">
-      
+  
+    <div class="player-wins" >
+      <p>Your Wins: <a id="player-wins">0</a></p>
+    </div>
+    <div class="computer-wins">
+      <p>Enemy Wins: <a id="enemy-wins">0</a></p>
     </div>
 
     <script>
       // Inline JavaScript code
     </script>
   </body>
+  <script src="./script.js"></script>
 </html>

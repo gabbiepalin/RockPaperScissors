@@ -20,8 +20,8 @@ padding: 0;
     cursor: pointer;
     padding: 5px;
     background-color: rgb(192, 221, 255);
+    transform: scale(1.1);
 }
 .buttons-div button img:hover {
     box-shadow: 3px 6px #f1c4f4;
-    
 }

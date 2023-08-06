@@ -36,6 +36,9 @@ function getPlayerChoice(choice) {
 
   if(playerwins_counter == 5 || computerwins_counter == 5) 
     clearCounters();
+
+    document.getElementById("player-wins").innerHTML = playerwins_counter;
+    document.getElementById("enemy-wins").innerHTML = computerwins_counter;
 }
 
 function clearCounters() {
@@ -69,6 +72,8 @@ function decideWinner(playerchoice, computerChoice) {
   }
   return "Error";
 }
+
+
 
 //next step would be to put both the computer and player choice together to play one round of the game
 
