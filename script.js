@@ -1,5 +1,7 @@
 let playerwins_counter = 0;
 let computerwins_counter = 0;
+let drawGames_counter = 0;
+let totalGames_counter = 0;
 
 // when decide winner happens +1 to counter 
 
@@ -26,25 +28,33 @@ function getPlayerChoice(choice) {
   const computerChoice = getComputerChoice();
   // console.log("computers choice", computerChoice);
   let decision = decideWinner(playerchoice, computerChoice);
+  totalGames_counter++;
 
   if(decision == "win") playerwins_counter = playerwins_counter + 1;
-  if(decision == "lose")  computerwins_counter = computerwins_counter + 1;
+  if(decision == "lose") computerwins_counter = computerwins_counter + 1;
+  if(decision == "draw") drawGames_counter = drawGames_counter + 1;
+
 
   console.log("You: " + decision);
   console.log("Player wins: " + playerwins_counter);
   console.log("Computer wins: " + computerwins_counter);
+  console.log("Total Games Played:" + totalGames_counter);
 
   if(playerwins_counter == 5 || computerwins_counter == 5) 
     clearCounters();
 
     document.getElementById("player-wins").innerHTML = playerwins_counter;
     document.getElementById("enemy-wins").innerHTML = computerwins_counter;
+    document.getElementById("draw-games").innerHTML = drawGames_counter;
+    document.getElementById("total-games").innerHTML = totalGames_counter;
 }
 
 function clearCounters() {
   console.log("Clearing Counters!");
   playerwins_counter = 0;
   computerwins_counter = 0;
+  drawGames_counter = 0;
+  totalGames_counter = 0;
 }
 
 function decideWinner(playerchoice, computerChoice) {

@@ -48,5 +48,18 @@ if either win counters are 5 or higher
 
 we want to have the loss/win/draw shown on the screen and not just to the console 
 
+add new counters for below: 
+	-draws (completed)
+	-total games 
+		- would be like the click me action that everytime a starting decision function was ran the counter would go up
+		by one 
+		-set the varible counter 
+		- set the anchor in html 
+		- 
+
+
+
+Add a text block of who won when they hit 5 wins
+	-Add a start again button 
 
 
