@@ -93,6 +93,9 @@ function decideWinner(playerchoice, computerChoice) {
 function showRestartGame() {
   console.log("restart game");
   restartButton.style.display = "block";
+  console.log("Player wins: " + playerwins_counter);
+  console.log("Computer wins: " + computerwins_counter);
+
 }
 
 
