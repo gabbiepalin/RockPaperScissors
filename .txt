@@ -64,3 +64,5 @@ Add a text block of who won when they hit 5 wins
 
 We want to call on 
 
+add into show restart game function the winner of the rounds 
+
