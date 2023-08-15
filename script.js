@@ -91,11 +91,12 @@ function decideWinner(playerchoice, computerChoice) {
 }
 
 function showRestartGame() {
+  if (playerwins_counter == 5){ return "You Win!";}
+  if (computerwins_counter == 5){ return "You Lose, Computer Wins!"}
   console.log("restart game");
   restartButton.style.display = "block";
   console.log("Player wins: " + playerwins_counter);
   console.log("Computer wins: " + computerwins_counter);
-
 }
 
 
