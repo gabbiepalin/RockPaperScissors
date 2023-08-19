@@ -42,9 +42,10 @@ function getPlayerChoice(choice) {
   console.log("Computer wins: " + computerwins_counter);
   console.log("Total Games Played:" + totalGames_counter);
 
-  if (playerwins_counter == 5 || computerwins_counter == 5)
+  if (playerwins_counter == 5 || computerwins_counter == 5) {
+    declareWinner();
     showRestartGame();
-
+  }
   document.getElementById("player-wins").innerHTML = playerwins_counter;
   document.getElementById("enemy-wins").innerHTML = computerwins_counter;
   document.getElementById("draw-games").innerHTML = drawGames_counter;
@@ -91,17 +92,20 @@ function decideWinner(playerchoice, computerChoice) {
 }
 
 function showRestartGame() {
-  if (playerwins_counter == 5){ return "You Win!";}
-  if (computerwins_counter == 5){ return "You Lose, Computer Wins!"}
   console.log("restart game");
   restartButton.style.display = "block";
   console.log("Player wins: " + playerwins_counter);
   console.log("Computer wins: " + computerwins_counter);
 }
 
+function declareWinner() {
+  console.log("declaring winner")
+  let winnerMessage = "";
+  if (playerwins_counter === 5) {winnerMessage =  "You Win, Computer loses!"};
+  if (computerwins_counter === 5) {winnerMessage =  "You Lose, Computer Wins!"};
 
-
-
+  document.getElementById("winner-declaration").innerHTML = `${winnerMessage}`;
+}
 
 //next step would be to put both the computer and player choice together to play one round of the game
 
